@@ -29,4 +29,5 @@ public class Cards {
     private int amountUsed;
 
     private int availableAmount;
+
 }
