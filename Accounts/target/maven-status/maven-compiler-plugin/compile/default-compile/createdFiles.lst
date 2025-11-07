@@ -12,7 +12,6 @@ in\dinesh\Accounts\mapper\AccountsMapper.class
 in\dinesh\Accounts\dto\ErrorResponseDto.class
 in\dinesh\Accounts\entity\BaseEntity.class
 in\dinesh\Accounts\exception\GlobalExceptionHandler.class
-in\dinesh\Accounts\config\OpenAPIConfig.class
 in\dinesh\Accounts\repository\AccountsRepository.class
 in\dinesh\Accounts\controller\AccountsController.class
 in\dinesh\Accounts\service\impl\AccountsServiceImpl.class

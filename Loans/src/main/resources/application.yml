@@ -1,4 +1,4 @@
-server:
+8server:
   port: 8090
 spring:
   datasource:

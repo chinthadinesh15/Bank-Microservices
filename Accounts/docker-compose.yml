@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  accounts:
+    image: chintadineshbabu/accounts:v1
+    container_name: accounts-container
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - dinesh-network
+
+  cards:
+    image: chintadineshbabu/cards:v1
+    container_name: cards-container
+    ports:
+      - "9000:9000"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - dinesh-network
+
+  loans:
+    image: chintadineshbabu/loans:v1
+    container_name: loans-container
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - dinesh-network
+
+networks:
+  dinesh-network:
+    driver: bridge
