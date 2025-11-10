@@ -1,5 +1,6 @@
 server:
   port: 8080
+
 spring:
   datasource:
     url: jdbc:h2:~/test
@@ -19,4 +20,24 @@ spring:
     init:
       mode: always  # This will execute schema.sql on every startup
       platform: h2  # Optional: specify platform-specific scripts
+  config:
+    import:
+      - classpath:application_qa.yml
+      - classpath:application_prod.yml
+  profiles:
+    active:
+      - prod
+ 
+
+build:
+  version: 3.0.0  # Default version, can be overridden by Maven
+
+accounts:
+  message: "Welcome to Accounts Microservice"
+  contactDetails:
+    name: "Dinesh"
+    email: "dinesh@gmail.com"
+  onCallSupport:
+    - 6300151568
+    - 9949689877
 
