@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:~/test
+    driverClassName: org.h2.Driver
+    username: dinesh
+    password: 12345
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none  # Changed from 'update' to 'none' to avoid conflicts with SQL scripts
+    show-sql: true
+    defer-datasource-initialization: true  # Important for H2 database
+  sql:
+    init:
+      mode: always  # This will execute schema.sql on every startup
+      platform: h2  # Optional: specify platform-specific scripts
+
+  config:
+    activate:
+      on-profile: qa
+
+
+build:
+  version: 2.0.0  # Default version, can be overridden by Maven
+
+accounts:
+  message: "Welcome to Accounts Microservice QA Profile"
+  contactDetails:
+    name: "Dinesh"
+    email: "dinesh@gmail.com"
+  onCallSupport:
+    - 6300151568
+    - 9949689877
+
